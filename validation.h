@@ -1,6 +1,3 @@
-#ifndef VALIDATION_H
-#define VALIDATION_H
+#pragma once
 
 bool passwordValidation(std::string password_par);
-
-#endif // VALIDATION_H

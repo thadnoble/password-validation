@@ -13,14 +13,14 @@ bool passwordValidation(std::string password_par) {
     bool isMoreThanMaximumLength = password_par.length() > 12;
 
     // Validates each character of the password
-    for (char ch : password_par){
-        if (islower(ch)) {
+    for (char passwordChar : password_par){
+        if (islower(passwordChar)) {
             hasLowercaseAlphabet = true;
-        } else if (isupper(ch)) {
+        } else if (isupper(passwordChar)) {
             hasUppercaseAlphabet = true;
-        } else if (isdigit(ch)) {
+        } else if (isdigit(passwordChar)) {
             hasNumber = true;
-        } else if (!isalnum(ch)) {
+        } else if (!isalnum(passwordChar)) {
             hasSpecialChar = true;
         }
     }
