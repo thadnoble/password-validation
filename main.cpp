@@ -40,6 +40,8 @@ int main() {
     }
 
     // Outputs all valid passwords
+    cout << "==============================" << endl;
+    cout << "Valid Passwords:" << endl;
     for (int i = 0; i < sizeof(validPasswords); i++) {
         cout << validPasswords[i] << endl;
     }
