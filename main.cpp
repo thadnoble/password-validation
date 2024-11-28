@@ -13,12 +13,11 @@
 #include "colormod.h"
 using namespace std;
 
+// Initialize global variables
 string passwordInput;
 vector<string> passwordList;
 
-Color::Modifier backgroundRed(Color::BG_RED);
-Color::Modifier backgroundGreen(Color::BG_GREEN);
-Color::Modifier backgroundDefaultColor(Color::BG_DEFAULT);
+// Initialize color modifiers
 Color::Modifier foregroundRed(Color::FG_RED);
 Color::Modifier foregroundGreen(Color::FG_GREEN);
 Color::Modifier foregroundDefaultColor(Color::FG_DEFAULT);
