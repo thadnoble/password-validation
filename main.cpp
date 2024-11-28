@@ -10,7 +10,6 @@
 #include <vector>
 #include <sstream>
 #include "validation.h"
-// #include <regex>
 using namespace std;
 
 string passwordInput;
@@ -33,7 +32,7 @@ int main() {
     
     // Validate all passwords entered
     vector<string> validPasswords;
-    for (int i = 0; i < sizeof(passwordList); i++) {
+    for (int i = 0; i < passwordList.size(); i++) {
         if (passwordValidation(passwordList[i])) {
             validPasswords.push_back(passwordList[i]);
         }
@@ -42,7 +41,7 @@ int main() {
     // Outputs all valid passwords
     cout << "==============================" << endl;
     cout << "Valid Passwords:" << endl;
-    for (int i = 0; i < sizeof(validPasswords); i++) {
+    for (int i = 0; i < validPasswords.size(); i++) {
         cout << validPasswords[i] << endl;
     }
 
