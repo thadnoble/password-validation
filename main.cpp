@@ -18,6 +18,7 @@ vector<string> passwordList;
 
 Color::Modifier red(Color::FG_RED);
 Color::Modifier green(Color::FG_GREEN);
+Color::Modifier defaultColor(Color::FG_DEFAULT);
 
 int main() {
     // Splash 
@@ -67,6 +68,7 @@ int main() {
         }
 
         cout << "==============================" << endl;
+        cout << defaultColor;
     // } while (passwordInput != "X" && passwordInput != "x");
     return 0;
 }
