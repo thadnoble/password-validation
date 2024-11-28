@@ -16,9 +16,12 @@ using namespace std;
 string passwordInput;
 vector<string> passwordList;
 
-Color::Modifier red(Color::FG_RED);
-Color::Modifier green(Color::FG_GREEN);
-Color::Modifier defaultColor(Color::FG_DEFAULT);
+Color::Modifier backgroundRed(Color::BG_RED);
+Color::Modifier backgroundGreen(Color::BG_GREEN);
+Color::Modifier backgroundDefaultColor(Color::BG_DEFAULT);
+Color::Modifier foregroundRed(Color::FG_RED);
+Color::Modifier foregroundGreen(Color::FG_GREEN);
+Color::Modifier foregroundDefaultColor(Color::FG_DEFAULT);
 
 int main() {
     // Splash 
@@ -49,7 +52,7 @@ int main() {
 
         // Outputs all valid passwords
         cout << "==============================" << endl;
-        cout << green << "Valid Passwords:" << endl;
+        cout << foregroundGreen << "Valid Passwords:" << endl;
         for (int i = 0; i < validPasswords.size(); i++) {
             cout << validPasswords[i] << endl;
         }
@@ -57,7 +60,7 @@ int main() {
         // Outputs all invalid passwords
         vector<string> invalidPasswords;
         cout << "==============================" << endl;
-        cout << red << "Invalid Passwords:" << endl;
+        cout << foregroundRed << "Invalid Passwords:" << endl;
         for (int i = 0; i < passwordList.size(); i++) {
             if (!passwordValidation(passwordList[i])) {
                 invalidPasswords.push_back(passwordList[i]);
@@ -68,7 +71,7 @@ int main() {
         }
 
         cout << "==============================" << endl;
-        cout << defaultColor;
+        cout << foregroundDefaultColor;
     // } while (passwordInput != "X" && passwordInput != "x");
     return 0;
 }
