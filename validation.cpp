@@ -3,17 +3,16 @@
 #include "validation.h"
 using namespace std;
 
-bool passwordValidation(std::string password_par) {
-    // Initialize criteria booleans
-    bool isMinimumLength = password_par.length() >= 6;
+bool isPasswordValid(const string &password) {
+    bool isMinimumLength = password.length() >= 6;
     bool hasLowercaseAlphabet = false;
     bool hasUppercaseAlphabet = false;
     bool hasNumber = false;
     bool hasSpecialChar = false;
-    bool isMoreThanMaximumLength = password_par.length() > 12;
+    bool isMoreThanMaximumLength = password.length() > 12;
 
-    // Validates each character of the password
-    for (char passwordChar : password_par){
+    // Loops through each character in the password
+    for (char passwordChar : password) {
         if (islower(passwordChar)) {
             hasLowercaseAlphabet = true;
         } else if (isupper(passwordChar)) {
@@ -25,5 +24,6 @@ bool passwordValidation(std::string password_par) {
         }
     }
 
-    return isMinimumLength && hasLowercaseAlphabet && hasUppercaseAlphabet && hasNumber && hasSpecialChar && !isMoreThanMaximumLength;
+    // Returns true if all criteria are met
+    return isMinimumLength && !isMoreThanMaximumLength && hasLowercaseAlphabet && hasUppercaseAlphabet && hasNumber && hasSpecialChar;
 }

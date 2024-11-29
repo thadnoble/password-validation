@@ -1,3 +1,3 @@
 #pragma once
 
-bool passwordValidation(std::string password_par);
+bool isPasswordValid(const string &password);
